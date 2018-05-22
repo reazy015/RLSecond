@@ -146,3 +146,10 @@
   visibility: hidden;
   z-index: -100;
 }
+.schedule--sl {
+  padding-top: 180px;
+
+  & .schedule__header {
+    margin-top: 0;
+  }
+}

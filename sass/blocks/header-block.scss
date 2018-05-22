@@ -12,6 +12,10 @@
     padding-bottom: 45px;
     background-image: url(../img/bg/mobile-bg.jpg);
   }
+
+  &--ls {
+    padding-bottom: 190px;
+  }
 }
 .page-header-top-wrapper {
   display: flex;
@@ -152,6 +156,13 @@
     visibility: visible;
     background-color: rgba(0, 0, 0, 0.1);
   }
+
+  &--sc {
+    @include gotham-bold;
+    background: #fff;
+    color: #1b5f87;
+    width: 289px;
+  }
 }
 .callback-btn-wrapper {
   display: block;
@@ -183,4 +194,11 @@
 @keyframes rollIn {
   from {top: -100%}
   to {top: 0%}
+}
+.page-header-callback-controls {
+  display: flex;
+
+  & .page-header__callback {
+    width: 289px;
+  }
 }

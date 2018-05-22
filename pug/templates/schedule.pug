@@ -1,4 +1,4 @@
-section.schedule
+section.schedule.schedule--sl
     div.container#schedule
         h2.schedule__header Расписание #[br] занятости теплоходов
         p.schedule__comment Выберите нужный вам день и оставьте заявку на бронирование
@@ -12,11 +12,18 @@ section.schedule
             div.schedule-panel-choice
                 span.schedule-panel-choice__text Экскурсионный теплоход:
                 label.choice-btn
+                    input(type='radio', name='ship').ship-choice-input
+                    span Де Марко
+                label.choice-btn
                     input(type='radio', name='ship', checked).ship-choice-input
                     span Марго
-                label.choice-btn.choice-btn--hidden
+                label.choice-btn
+                    input(type='radio', name='ship').ship-choice-input
+                    span Пиета
+                label.choice-btn
                     input(type='radio', name='ship').ship-choice-input
                     span Фаворит
+
         div.schedule-table-grid-container
             table.schedule-table.schedule-table--ss
                 tr

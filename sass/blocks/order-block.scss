@@ -436,5 +436,23 @@
     opacity: 1;
   }
 }
+.routes--sl .order-panel {
+  position: static;
+  transform: translate(0%, 0%);
+  width: 100%;
 
+}
+.order-panel-decor-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 1175px;
+  transform: translate(-50%, 17%);
+  background-color: #fff;
+  display: flex;
+  max-height: 465px;
+  z-index: 20;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
 
