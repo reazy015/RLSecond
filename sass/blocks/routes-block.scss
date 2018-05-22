@@ -1,0 +1,67 @@
+.routes {
+  padding-top: 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 50px;
+  }
+}
+.routes__header {
+  @include anaphora;
+  text-align: center;
+  font-size: 48px;
+  color: $dark-blue;
+
+  @media (max-width: 580px) {
+    font-size: 24px;
+  }
+}
+.routes-decor-wrapper {
+  width: 135px;
+  margin: 0 auto;
+}
+.routes-decor__img {
+  max-width: 100%;
+  height: auto;
+}
+.routes-decor-block {
+  position: relative;
+  height: 300px;
+  margin-top: 200px;
+  background-image: url(../img/bg/routes-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  @media (max-width: 1190px) {
+    height: auto;
+    background-image: none;
+    margin-top: 50px;
+  }
+}
+.routes-schema-img-wrapper {
+  position: absolute;
+  left: 50%;
+  top: -40%;
+  transform: translate(-50%);
+  z-index: 50;
+
+  @media (max-width: 1190px) {
+    position: static;
+    transform: translate(0%);
+  }
+
+  @media (max-width: 768px) {
+    overflow: scroll;
+  }
+}
+.routes-schema__img {
+  @media (max-width: 1191px) {
+    width: 100%;
+    height: auto;
+  }
+  
+  @media (max-width: 768px) {
+    width: 768px;
+    height: auto;
+  }
+}

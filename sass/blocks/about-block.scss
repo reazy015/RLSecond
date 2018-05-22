@@ -1,0 +1,236 @@
+.about {
+  position: relative;
+  padding-top: 290px;
+  padding-bottom: 335px;
+  background-color: $light-blue;
+
+  @media (max-width: 1260px) {
+    padding-bottom: 0px;
+  }
+
+  @media (max-width: 1190px) {
+    padding-top: 90px;
+  }
+
+  @media (max-width: 580px) {
+    padding-top: 45px;
+  }
+}
+.about__header {
+  @include anaphora;
+  margin: 0;
+  font-size: 48px;
+  color: $dark-blue;
+
+  @media (max-width: 1260px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 580px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+}
+.about__comment {
+  @include gotham-reg;
+  font-size: 16px;
+  color: $font-light-blue;
+
+  @media (max-width: 1260px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 14px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 580px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.about-info {
+  display: flex;
+  max-width: 500px;
+  justify-content: space-between;
+
+  @media (max-width: 1260px) {
+    margin-bottom: 25px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+  }
+
+  @media (max-width: 580px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+.about-info-time,
+.about-info-time-price{
+  @media (max-width: 580px) {
+    margin-bottom: 35px;
+  }
+}
+.about-info-time__header,
+.about-info-time-price__header {
+  @include gotham-reg;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: $font-light-blue;
+}
+.about-info-time__limit span {
+  @include gotham-bold;
+  font-size: 14px;
+  color: $dark-blue;
+}
+.about-info-time__limit,
+.about-info-time-price__price {
+  @include gotham-bold;
+  font-size: 24px;
+  color: $dark-blue;
+}
+.about-description {
+  position: absolute;
+  bottom: 0;
+  width: 1260px;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 70px;
+  padding-bottom: 75px;
+  transform: translateY(50%);
+  background-color: $basic-white;
+  z-index: 50;
+  
+  @media (max-width: 1260px) {
+    position: static;
+    width: 100%;
+    transform: translate(0%);
+  }
+
+  @media (max-width: 768px) {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  @media (max-width: 580px) {
+    padding-top: 35px;
+  }
+}
+.about-description-list-wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  @media (max-width: 580px) {
+    flex-direction: column;
+  }
+}
+.about-description-item {
+  flex: 0 1 200px;
+
+  @media (max-width: 768px) {
+    flex: 1 1 200px;
+    margin-right: 25px;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+  }
+}
+.about-description__header {
+  @include anaphora;
+  margin-bottom: 65px;
+  font-size: 24px;
+  color: $dark-blue;
+
+  @media (max-width: 580px) {
+    font-size: 28px;
+    margin-bottom: 35px;
+  }
+}
+.description-item-number {
+  @include gotham-bold;
+  font-size: 72px;
+  color: $dark-blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  & span {
+    @include gotham-reg;
+    font-size: 32px;
+    color: $table-azure;
+
+    @media (max-width: 768px) {
+      padding-left: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+  }
+}
+.description-item-name {
+  @include gotham-reg;
+  font-size: 14px;
+  color: $font-light-blue;
+
+  & span {
+    @include gotham-bold;
+    color: #7096ad;
+  }
+
+  @media (max-width: 580px) {
+    line-height: 1.8;
+  }
+}
+.description-item-list {
+  @include list-reset;
+  margin-top: 50px;
+
+  @media (max-width: 580px) {
+    margin-bottom: 50px;
+  }
+}
+.description-item-list__point {
+  @include gotham-reg;
+  position: relative;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  font-size: 14px;
+  color: $dark-blue;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: $table-azure;
+  }
+}
+.description-item-number > span {
+  @media(max-width: 580px) {
+    display: none;
+  }
+}

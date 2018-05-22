@@ -1,0 +1,491 @@
+.popup-wrapper {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(19, 59, 77, 0.9);
+  overflow: auto;
+  animation: .4s fadeIn;
+  
+  &--open {
+    display: block;
+    z-index: 100;
+  }
+}
+.popup-module {
+  position: relative;
+  top: 5%;
+  bottom: 5%;
+  max-width: 725px;
+  margin: auto;
+  padding: 60px 55px;
+  background-color: #fff;
+  animation: .4s slideInUp;
+
+  @media (max-width: 735px) {
+    padding: 10px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+.popup-module__header {
+  @include anaphora;
+  font-size: 36px;
+  color: $dark-blue;
+  margin-bottom: 5px;
+}
+.popup-module__date {
+  @include gotham-bold;
+  font-size: 24px;
+  color: #00bac0;
+  margin-top: 0;
+  margin-bottom: 70px;
+
+  @media (max-width: 730px) {
+    margin-bottom: 25px;
+  }
+}
+.popup-module-input-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 25px;
+  margin-bottom: 35px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &--agreement {
+    @include gotham-reg;
+    margin-top: 82px;
+    margin-bottom: 42px;
+    font-size: 12px;
+    color: #145378;
+
+    @media (max-width: 460px) {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    & a {
+      color: #00bac0;
+      &:last-of-type {
+        @media (max-width: 730px) {
+          padding-left: 35px;
+        }
+      }
+    }
+
+    & span {
+      position: relative;
+      padding-left: 35px;
+
+      @media (max-width: 730px) {
+        line-height: 1.8;
+      }
+    }
+    
+    & input[type='checkbox'] {
+      display: none;
+    }
+
+    & input[type='checkbox']:checked ~ span:before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      background-color: #00bac0;
+      background-image: url(../img/icons/checkbox-icon.png);
+      background-repeat: no-repeat;
+      background-position: center center;
+      border: 1px solid #00bac0;
+      border-radius: 5px;
+    }
+
+    & input[type='checkbox'] ~ span:before {
+      position: absolute;
+      display: block;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border: 1px solid #00bac0;
+      border-radius: 5px;
+    }
+  }
+
+  @media (max-width: 735px) {
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}
+.popup-module-form {
+  transition: all .3s;
+}
+.popup-module-form__header {
+  @include gotham-bold;
+  font-size: 14px;
+  color: #145378;
+}
+.custom-select {
+  @include gotham-reg;
+  color: $font-light-blue;
+  position: relative;
+  flex: 0 1 48%;
+
+  &:first-of-type {
+    color: $font-dark-blue-label;
+  }
+
+  @media (max-width: 735px) {
+    margin-bottom: 15px;
+  }
+}
+.custom-select-actual {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 20px 25px;
+  background-color: #e9f3f8;
+  border-radius: 50px;
+
+  & > i {
+    color: $dark-blue;
+  }
+}
+.variant-list-item {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  transition: background-color .2s;
+
+  &:hover {
+    background-color: #00bac0;
+  }
+}
+.custom-select-variant-list {
+  @include list-reset;
+  visibility: hidden;
+  position: absolute;
+  top: 110%;
+  width: 90%;
+  height: 230px;
+  overflow-Y: scroll;
+  will-change: auto;
+  transition: opacity .3s, transform .3s;
+  background-color: #e9f3f8;
+  border-radius: 15px;
+  opacity: 0;
+  transform: scale(0.9);
+  z-index: -100;
+}
+.variant-list-item input[type='radio'] {
+  display: none;
+}
+.begin-time-wrapper {
+  flex: 1 1 auto;
+}
+.begin-time {
+  flex: 1 1 100%;
+  margin-right: 45px;
+
+  @media (max-width: 735px) {
+    margin-right: 0px;
+  }
+}
+.begin-time-variants-list--open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 50;
+}
+.custom-select-variant-list--open {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
+  z-index: 50;
+  overflow-y: auto;
+}
+.popup-module-form__input {
+  flex: 0 1 48%;
+  background-color: #e9f3f8;
+  padding: 20px 25px;
+  border: none;
+  border-radius: 50px;
+
+  &:focus {
+    outline: none;
+  }
+
+  @media (max-width: 735px) {
+    margin-bottom: 15px;
+  }
+}
+.popup-module__close {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: -45px;
+  right: 0;
+  background-image: url(../img/icons/close.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+.popup-module-form__submit {
+  @include gotham-reg;
+  text-transform: uppercase;
+  width: 210px;
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 12px;
+  color: $basic-white;
+  background: linear-gradient(#00c6c4, #0079ac);
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: 730px) {
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+.order-price__header {
+  @include gotham-bold;
+  padding-right: 15px;
+  font-size: 18px;
+  color: #145378;
+}
+.order-price__number {
+  @include gotham-bold;
+  font-size: 30px;
+  color: #44ccd1;
+}
+.order-price__currency {
+  @include gotham-bold;
+  font-size: 18px;
+  color: #44ccd1;
+}
+.time-input {
+  @include gotham-reg;
+  color: $dark-blue;
+  border: none;
+  background-color: transparent;
+
+  &::placeholder {
+    color: $font-light-blue;
+    opacity: 1;
+  }
+}
+input[data-readonly] {
+  pointer-events: none;
+
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
+.input-wrapper__instruction {
+  @include gotham-reg;
+  flex: 1 1 100%;
+  padding-bottom: 15px;
+  color: $font-light-blue-label;
+}
+.time-input-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+  @media (max-width: 460px) {
+    display: block;
+  }
+}
+.custom-select--alldaycheck {
+  @include gotham-bold;
+  font-size: 14px;
+  color: $dark-blue;
+  text-align: right;
+  flex: 0 1 120px;
+
+  & span {
+    padding-right: 30px;
+  }
+
+  @media (max-width: 460px) {
+    text-align: left;
+  }
+}
+.alldaycheck-input-wrapper {
+  cursor: pointer;
+}
+.alldaycheck-input-wrapper span {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+.alldaycheck-input-wrapper input[type='checkbox'] {
+  display: none;
+}
+.alldaycheck-input-wrapper span:before {
+  position: absolute;
+  display: block;
+  content: '';
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00bac0;
+  border-radius: 5px;
+  transition: background-color .3s, background-image .3s;
+
+  @media (max-width: 460px) {
+    left: 90px;
+  }
+}
+.alldaycheck-input-wrapper input[type='checkbox']:checked ~ span:before {
+  background-color: #00bac0;
+  background-image: url(../img/icons/checkbox-icon.png);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #00bac0;
+  border-radius: 5px;
+}
+.passenger-info-block {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  animation: .3 slideInRight;
+
+  @media (max-width: 560px) {
+    flex-wrap: wrap;
+  }
+}
+.passenger-info-block:first-of-type .passenger-ticket-price {
+  margin-right: 30px;
+
+  @media (max-width: 460px) {
+    margin-right: 55px;
+  }
+
+  @media (max-width: 360px) {
+    margin-right: 30px
+  }
+}
+.passenger-number {
+  @include gotham-reg;
+  font-size: 16px;
+  color: $dark-blue;
+  margin-right: 50px;
+
+  @media (max-width: 736px) {
+    margin-right: 10px;
+  }
+
+  @media (max-width: 560px) {
+    flex: 1 1 100%;
+    padding-bottom: 15px;
+  }
+}
+.passenger-type-input {
+  @include gotham-reg;
+  flex: 0 1 290px;
+  color: $font-light-blue;
+  border: none;
+  background-color: transparent;
+  margin-right: auto;
+
+  @media (max-width: 735px) {
+    flex: 1 1 auto;
+    margin-right: 15px;
+  }
+
+  @media (max-width: 460px) {
+    width: 180px;
+    margin-right: 0;
+    flex: 0;
+  }
+
+  @media (max-width: 360px) {
+    width: 150px;
+  }
+}
+input[name="passenger-type"] {
+  @media (max-width: 460px) {
+    width: 120px;
+  }
+
+  @media (max-width: 360px) {
+    width: 90px;
+  }
+}
+.add-passenger-btn {
+  @include gotham-reg;
+  font-size: 14px;
+  border: none;
+  background-color: transparent;
+  color: #00bac0;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color .3s;
+
+  @media (max-width: 735px) {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  &:hover {
+    color: $dark-blue;
+  }
+}
+.passenger-ticket-price {
+  @include gotham-bold;
+  font-size: 16px;
+  color: $dark-blue;
+}
+.passenger-type-input-wrapper {
+  position: relative;
+  margin-right: 0;
+}
+.custom-select-variant-list--passenger {
+  width: 100%;
+  height: auto;
+  left: 0;
+  overflow: auto;
+}
+.delete-passenger {
+  font-size: 14px;
+  color: #44ccd1;
+  transition: color .3s;
+  cursor: pointer;
+  margin-left: 22px;
+  &:hover {
+    color: red;
+  }
+
+  @media (max-width: 360px) {
+    margin-left: 0;
+  }
+}
+.passenger-info-block-animate {
+  animation: .3 slideInRight;
+}

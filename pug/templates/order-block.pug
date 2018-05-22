@@ -1,0 +1,62 @@
+div.order-panel#ships
+    div(data-target='1').order-panel-slider.order-panel-slider--active#first
+        div.swiper-container
+            div.swiper-wrapper
+                div(style='background-image: url(./img/slides/m-slide1.jpg)', data-imgurl='./img/slides/m-slide1.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/m-slide2.jpg)', data-imgurl='./img/slides/m-slide2.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/m-slide3.jpg)', data-imgurl='./img/slides/m-slide3.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/m-slide4.jpg)', data-imgurl='./img/slides/m-slide4.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/m-slide5.jpg)', data-imgurl='./img/slides/m-slide5.jpg').swiper-slide.swiper-slide--bg
+            div.swiper-button-next.swiper-button--pos
+                i.fas.fa-chevron-right
+            div.swiper-button-prev.swiper-button--pos
+                i.fas.fa-chevron-left
+            div.order-panel-slider__center.img-zoom
+                i.fas.fa-search-plus
+    div(data-target='2').order-panel-slider#second
+        div.swiper-container
+            div.swiper-wrapper
+                div(style='background-image: url(./img/slides/f-slide2.jpg)', data-imgurl='./img/slides/f-slide2.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/f-slide3.jpg)', data-imgurl='./img/slides/f-slide3.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/f-slide4.jpg)', data-imgurl='./img/slides/f-slide4.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/f-slide1.jpg)', data-imgurl='./img/slides/f-slide5.jpg').swiper-slide.swiper-slide--bg
+                div(style='background-image: url(./img/slides/f-slide5.jpeg)', data-imgurl='./img/slides/f-slide1.jpg').swiper-slide.swiper-slide--bg
+            div.swiper-button-next.swiper-button--pos
+                i.fas.fa-chevron-right
+            div.swiper-button-prev.swiper-button--pos
+                i.fas.fa-chevron-left
+            div.order-panel-slider__center.img-zoom
+                i.fas.fa-search-plus
+    div.order-toggle-wrapper
+        div.order-panel-toggle
+            div.current-button-mobile
+                div.order-toggle-button.order-toggle-button--active
+                    div.order-toggle-button-icon
+                        img(src='img/icons/windmill.png' alt='icon-img').order-toggle-button__img
+                    div.order-toggle-button-text Теплоход #[br] #[span Марго]
+                span.decor
+                    i.fas.fa-chevron-down
+            div.buttons-wrapper-helper
+                div(data-target='1').order-toggle-button.hidden
+                    div.order-toggle-button-icon.
+                        img(src='img/icons/ship.png' alt='icon-img').order-toggle-button__img
+                    div.order-toggle-button-text Теплоход #[br] #[span Фаворит]
+                div(data-target='2').order-toggle-button.order-toggle-button--active
+                    div.order-toggle-button-icon
+                        img(src='img/icons/windmill.png' alt='icon-img').order-toggle-button__img
+                    div.order-toggle-button-text Теплоход #[br] #[span Марго]
+        div(data-target='1').order-panel-ship-info.order-panel-ship-info--active
+            h3.ship-info__header Марго
+            div.ship-info-params
+                div.ship-params__class #[span Класс теплохода:] #[br] #[span P1.2]
+                div.ship-params__class #[span Количество мест:] #[br] #[span 35]
+                div.ship-params__class #[span Преимущества:] #[br] #[span WC, 2014, Бар]
+        div(data-target='2').order-panel-ship-info
+            h3.ship-info__header Фаворит
+            div.ship-info-params
+                div.ship-params__class #[span Класс теплохода:] #[br] #[span P1.2]
+                div.ship-params__class #[span Количество мест:] #[br] #[span 35]
+                div.ship-params__class #[span Преимущества:] #[br] #[span WC, 2014, Бар]
+        div.order-panel-controls-wrapper
+            div.order-panel__buy Забронировать
+            a(href='#schedule').order-panel__schedule Календарь стоимости

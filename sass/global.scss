@@ -1,0 +1,31 @@
+.container {
+  max-width: 1226px;
+  margin: 0 auto;
+
+  &:focus {
+    outline: none;
+  }
+
+  &--header {
+    max-width: 1175px;
+
+    @media (max-width: 1175px) {
+      max-width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    @media (max-width: 680px) {
+      padding-left: 25px;
+      padding-right: 25px;
+    }
+  }
+}
+.no-scroll {
+  overflow: hidden;
+}
+.hidden {
+  visibility: hidden;
+  position: absolute;
+  z-index: -100500;
+}

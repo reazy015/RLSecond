@@ -1,0 +1,116 @@
+.company {
+  background-image: url(../img/bg/company-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.company-info-wrapper {
+  max-width: 80%;
+  margin: 0 auto;
+  padding-top: 80px;
+  padding-bottom: 100px;
+  padding-left: 75px;
+  padding-right: 75px;
+  background-color: $company-background;
+
+  @media (max-width: 768px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 580px) {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+  }
+}
+.company__header {
+  @include anaphora;
+  font-size: 48px;
+  color: $basic-white;
+
+  @media (max-width: 580px) {
+    font-size: 38px;
+  }
+}
+.company__subheader {
+  @include gotham-bold;
+  font-size: 24px;
+  color: $basic-white;
+
+  @media (max-width: 580px) {
+    font-size: 18px;
+  }
+}
+.company__text {
+  @include gotham-reg;
+  font-size: 14px;
+  color: $company-text;
+  margin-bottom: 35px;
+  line-height: 1.8;
+}
+.company-docs-wrapper {
+  display: flex;
+
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
+}
+.company-license {
+  flex: 0 1 50%;
+}
+.company-license__header {
+  @include gotham-bold;
+  font-size: 18px;
+  color: $basic-white;
+}
+.license-wrapper {
+  display: flex;
+
+  @media (max-width: 580px) {
+    flex-wrap: wrap;
+  }
+}
+.license-item {
+  position: relative;
+  flex: 0 1 90px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+
+  &:before {
+    display: block;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(90, 115, 130, 0.4);
+    transition: background-color .3s;
+
+  }
+
+  &:hover:before {
+    background-color: rgba(4, 184, 189, 0.4);
+  }
+  &:hover > span {
+    opacity: 1;
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+  }
+
+  & .hover-decor {
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: $basic-white;
+    transition: opacity .3s;
+  }
+}

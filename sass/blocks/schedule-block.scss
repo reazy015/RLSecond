@@ -1,0 +1,148 @@
+.schedule {
+  padding-top: 93px;
+  padding-bottom: 105px;
+  background-color: $light-blue;
+
+  @media (max-width: 1262px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 45px;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-bottom: 75px;
+  }
+}
+.schedule__header {
+  @include anaphora;
+  margin-left: auto;
+  font-size: 48px;
+  text-align: right;
+  color: $font-blue;
+
+  @media (max-width: 680px) {
+    margin-top: 0;
+    font-size: 28px;
+    text-align: left;
+  }
+}
+.schedule__comment {
+  @include gotham-reg;
+  margin-bottom: 70px;
+  font-size: 16px;
+  color: $font-light-blue;
+  text-align: right;
+
+  @media (max-width: 680px) {
+    margin-bottom: 45px;
+    font-size: 14px;
+    text-align: left;
+    line-height: 1.8;
+  }
+}
+.schedule-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+
+  @media (max-width: 680px) {
+    flex-direction: column-reverse;
+  }
+}
+.schedule-panel-date {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (max-width: 680px) {
+    margin-top: 20px;
+    width: 270px;
+    margin-right: auto;
+  }
+}
+.schedule-panel-date__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: $basic-white;
+  cursor: pointer;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: #00bac0;
+  }
+  &:hover > i {
+    color: #fff;
+  }
+}
+.schedule-panel-date__btn i {
+  color: $font-light-blue-label;
+}
+.schedule-panel-date__info {
+  @include gotham-reg;
+  font-size: 16px;
+  text-align: center;
+  width: 160px;
+  color: $table-azure;
+
+  @media (max-width: 768px) {
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+}
+.schedule-panel-choice {
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 680px) {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+.schedule-panel-choice__text {
+  @include gotham-reg;
+  color: $font-light-blue;
+  padding-right: 25px;
+
+  @media (max-width: 768px) {
+    width: 120px;
+  }
+
+  @media (max-width: 680px) {
+    flex: 1 1 100%;
+    padding-bottom: 20px;
+  }
+}
+.ship-choice-input {
+  display: none;
+}
+.ship-choice-input ~ span {
+  @include gotham-bold;
+  display: block;
+  margin-right: 10px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  border: 1px solid $table-border;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: $font-light-blue-label;
+  cursor: pointer;
+  transition: color .5s, background-color .5s;
+}
+.ship-choice-input:checked ~ span {
+  border: 1px solid $basic-white;
+  background-color: $basic-white;
+  color: $font-dark-blue-label;
+}
+.choice-btn--hidden {
+  position: absolute;
+  visibility: hidden;
+  z-index: -100;
+}

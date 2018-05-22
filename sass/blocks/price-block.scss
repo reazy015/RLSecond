@@ -1,0 +1,110 @@
+.price {
+  position: relative;
+  padding-top: 380px;
+  padding-bottom: 325px;
+  background-image: url(../img/bg/price-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0% center;
+
+  @media (max-width: 1260px) {
+    padding-top: 75px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  @media (max-width: 1180px) {
+    padding-bottom: 0px;
+  }
+
+  @media (max-width: 580px) {
+    padding-top: 35px;
+  }
+}
+.price__header {
+  @include anaphora;
+  font-size: 48px;
+  color: $basic-white;
+
+  @media (max-width: 580px) {
+    font-size: 32px;
+  }
+}
+.price__comment {
+  @include gotham-reg;
+  font-size: 14px;
+  color: #b1d9f1;
+}
+.price-ship__names {
+  @include anaphora;
+  font-size: 30px;
+  color: $basic-white;
+}
+.price-ship-info {
+  width: 270px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.price-ship-info-class__header {
+  @include gotham-reg;
+  font-size: 12px;
+  color: #b1d9f1;
+}
+.price-ship-info-class__class {
+  @include gotham-bold;
+  font-size: 16px;
+  color: $basic-white;
+}
+.price-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.price-table tr td,
+.price-table tr th{
+  border: 1px solid $middle-blue;
+}
+.price-table tr td:first-of-type {
+  width: 270px;
+}
+.price-table tr th {
+  @include gotham-bold;
+  height: 40px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $basic-white;
+
+  @media (max-width: 580px) {
+    padding: 10px;
+  }
+}
+.price-table tr td {
+  @include gotham-reg;
+  height: 90px;
+  font-size: 14px;
+  color: $basic-white;
+  text-align: center;
+
+  @media (max-width: 580px) {
+    padding: 10px;
+  }
+}
+.price-additional-info {
+  @include gotham-reg;
+  margin-top: 60px;
+  font-size: 12px;
+  text-align: right;
+  color: #b1d9f1;
+
+  @media (max-width: 1175px) {
+    margin-bottom: 45px;
+  }
+  
+  @media (max-width: 768px) {
+    line-height: 1.8;
+
+    & br {
+      display: none;
+    }
+  }
+}
