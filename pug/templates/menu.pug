@@ -1,96 +1,519 @@
-section.menu
+section.menu.menu--sl
     div.container#menu
+        h2.menu__header Еда на вашем мероприятии
+        p.menu__comment Стоимость меню указана за 1 персону, вес указан без учета напитков
         div.menu-intro-wrapper
             div.menu-intro-left
-                h2.menu__header Бар и барное меню
-                p.menu__comment На музейном маршруте работает бар
+                label.menu-type-toggle
+                    input(type='radio', name='menu-type', checked)
+                    span Банкет
+                label.menu-type-toggle
+                    input(type='radio', name='menu-type')
+                    span Фуршет
             div.menu-intro-right
                 a(href='#').menu-download-link Скачать все в PDF
-        div.menu-example
-            div.menu-example-list
-                div.menu-example-block
-                    h4.menu-example__header Напитки
-                    div.menu-example-list-item
-                        div.list-item__prop Вода с газом или без газа 500мл
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Кока-Кола / Фанта / Спрайт 500 мл 500мл
-                        div.list-item__value 150 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Сок в ассортименте
-                        div.list-item__value 100/400 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Чай гринфилд в ассортименте
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Кофе натуральный
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Кофе с молоком
-                        div.list-item__value 150 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Пиво светлое 500 мл
-                        div.list-item__value 200 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Игристое вино 750 мл
-                        div.list-item__value 1500 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Вин белое или красное 150 / 750 мл
-                        div.list-item__value 300 / 1300 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Водка царская золотая 50 мл
-                        div.list-item__value 250 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Коньяк «Царь Тигран»
-                        div.list-item__value 350 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Виск «Джемисон» 50 мл
-                        div.list-item__value 350 рублей
-                div.menu-example-block
-                    h4.menu-example__header Еда
-                    div.menu-example-list-item
-                        div.list-item__prop Багет с лососем слобосоленым
-                        div.list-item__value 200 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Багет с ветчиной
-                        div.list-item__value 150 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Багет с сыром
-                        div.list-item__value 150 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Бутерброд с сырокопченой колбасой
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Сэндвич с цыпленком
-                        div.list-item__value 150 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Сосика в тесте
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Мини-Пицца
-                        div.list-item__value 150 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Булочка с маком в шоколадной глазури
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Слойка с яблоками и корицей
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Круассан с малиновым вареньем
-                        div.list-item__value 50 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Мини-шашлык из цыпленком с маринованным луком и соусом барбекю
-                        div.list-item__value 200 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Мини шашлык из свинины с маринованным луком и соусом Барбекю
-                        div.list-item__value 250 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Сухарики домашние острые
-                        div.list-item__value 100 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Морковный пряник
-                        div.list-item__value 50 рублей
-                    div.menu-example-list-item
-                        div.list-item__prop Песочное кольцо с арахисом
-                        div.list-item__value 50 рублей
+        div.menu-wrapper
+            div.menu-example-controls
+                ul.menu-controls-list
+                    li(data-target="1").menu-controls-item
+                        span 1500 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="2").menu-controls-item
+                        span 1800 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="3").menu-controls-item.menu-controls-item--active
+                        span 2000 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="4").menu-controls-item
+                        span 2500 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="5").menu-controls-item
+                        span 2750 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="6").menu-controls-item
+                        span 3000 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="7").menu-controls-item
+                        span 3500 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="8").menu-controls-item
+                        span 3880 р. #[br]
+                        span Вес 1285 г.
+                    li(data-target="9").menu-controls-active-marker
+            div.menu-example
+                div(data-target='1').menu-example-wrapper.menu-example-wrapper--active
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
 
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='2').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='3').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='4').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='5').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='6').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='7').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='8').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150
+
+                div(data-target='9').menu-example-wrapper
+                    div.menu-example-block
+                        h4.menu-example__header Холодные закуски
+                        div.menu-example-list-item
+                            div.list-item__prop Эсколар горячего копчения на свекольном дранике с розочкой из имбиря
+                            div.list-item__value 1/55
+                        div.menu-example-list-item
+                            div.list-item__prop Ролл из лосося со сливочным сыром и черным кунжутом
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Филе форели, маринованное в имбире и апельсинах на оливковом бисквите
+                            div.list-item__value 1/45
+                        div.menu-example-list-item
+                            div.list-item__prop Филе индейки, запеченное в медовой глазури с дольками яблок
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Свиная корейка, маринованная в коньяке и зерновой горчице, запеченная на низких температурах, подается в ожерелье из свежих овощей и с микс-салатом с хреном и горчицей
+                            div.list-item__value 1/35/20
+                        div.menu-example-list-item
+                            div.list-item__prop Телячий язык, сваренный в пряном бульоне, сервируется с овощным салатом, подается с домашним соусом с хреном
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти сыров (Гоюс, Олдер) с виноградом, грецким орехом и домашним вареньем
+                            div.list-item__value 1/30/25
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из черных маслин и зеленых оливок, заправленных оливковым маслом с чесноком
+                            div.list-item__value 1/30/35
+                        div.menu-example-list-item
+                            div.list-item__prop Ассорти из свежих, крупно нарезанных овощей с садовой зеленью
+                            div.list-item__value 1/15/5
+                    div.menu-example-block
+                        h4.menu-example__header Салаты
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из языка и говядины с жаренными овощами и крем-соусом
+                            div.list-item__value 1/100
+                        div.menu-example-list-item
+                            div.list-item__prop Салат из обжаренного филе индейки, сыра “Моцарелла”, салата Ромейн и томатов черри
+                            div.list-item__value 1/75
+
+                        h4.menu-example__header Горячая закуска
+
+                        div.menu-example-list-item
+                            div.list-item__prop Жульен с курой и лесными грибами, запеченный в домашнем блине
+                            div.list-item__value 1/85
+
+                        h4.menu-example__header Горячее блюдо на выбор #[br] #[span (одна порция каждому гостю)]
+                        div.menu-example-list-item
+                            div.list-item__prop Филе лосося, приготовленное на пару с креветочным соусом, подается с картофельным суфле и овощами гриль
+                            div.list-item__value 1/125/150
+                        div.menu-example-list-item
+                            div.list-item__prop Телятина, запеченная с розмарином, подается с соусом деми-гляс и картофелем гратен
+                            div.list-item__value 1/125/150

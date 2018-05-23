@@ -1,0 +1,56 @@
+.add-info-decor-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: rgba(0, 0, 0, 0.09);
+  padding: 10px;
+  width: 1180px;
+}
+.add-info {
+  display: flex;
+  background-color: $basic-white;
+}
+.add-info-schema {
+  flex: 0 0 425px;
+  background-image: url(../img/content/add-info-schema.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.add-info-descr {
+  padding-top: 45px;
+  padding-left: 55px;
+  padding-right: 60px;
+  padding-bottom: 45px;
+}
+.add-info-descr__header {
+  @include anaphora;
+  font-size: 30px;
+  color: #145378;
+  margin-top: 0;
+  margin-bottom: 45px;
+}
+.add-info-list {
+  @include list-reset;
+}
+.add-info-list__item {
+  @include gotham-reg;
+  position: relative;
+  font-size: 12px;
+  line-height: 1.8;
+  color: #145378;
+  padding-left: 50px;
+  margin-bottom: 35px;
+}
+.add-info-list__item:before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 0;
+  background-image: url(../img/icons/add-info-marker.svg);
+}
+
