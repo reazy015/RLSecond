@@ -1,0 +1,44 @@
+.ship-page  {
+
+	& .container--header {
+		max-width: 1225px;
+	}
+
+	& .page-header-nav-wrapper {
+		display: flex;
+		flex-direction: row-reverse;
+		flex: 1 1 auto;
+		align-items: center;
+		margin-left: 0;
+	}
+
+	& .page-header-nav {
+		flex: 0 1 825px;
+		margin-right: auto;
+	}
+
+	& .page-header__phone {
+		margin-bottom: 0;
+	}
+
+	& .page-header-nav-list {
+		justify-content: space-between;
+	}
+
+	& .page-header {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: $dark-blue;
+		border-bottom: 10px solid #214863;
+		background-image: none;
+	}
+
+	& .page-header-logo-wrapper {
+		margin-right: 40px;
+	}
+
+}
+.phone-link {
+	text-decoration: none;
+	color: $basic-white;
+}

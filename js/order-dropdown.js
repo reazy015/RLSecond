@@ -15,7 +15,7 @@ window.orderDropdown = (function (){
     for (var i = 0; i < orderPanelToggleBtnsList.length; i++) {
      orderPanelToggleBtnsList[i].classList.remove('order-toggle-button--active');
      shipInfoList[i].classList.remove('order-panel-ship-info--active');
-     orderPanelSlidersList[i].classList.remove('order-panel-slider--active')
+     orderPanelSlidersList[i].classList.remove('order-panel-slider--active');
     }
   }
 
@@ -23,23 +23,14 @@ window.orderDropdown = (function (){
     dropdownBtn.replaceChild(item, dropdownBtn.firstElementChild)
   }
 
-  orderPanelToggleBtnsList[0].addEventListener('click', function() {
-    disableAllActiveInfoBlocks();
-    this.classList.add('order-toggle-button--active');
-    shipInfoList[1].classList.add('order-panel-ship-info--active');
-    orderPanelSlidersList[1].classList.add('order-panel-slider--active');
-    submenu.classList.remove('buttons-wrapper-helper--active');
-    replaceMobileCurrentBtn(this.cloneNode(true))
-  });
+  for (var i = 0; i < orderPanelToggleBtnsList.length; i++) {
+    orderPanelToggleBtnsList[i].addEventListener('click', function(evt) {
+      disableAllActiveInfoBlocks();
+      this.classList.add('order-toggle-button--active');
+      shipInfoList[this.dataset.target - 1].classList.add('order-panel-ship-info--active');
+      orderPanelSlidersList[this.dataset.target - 1].classList.add('order-panel-slider--active');
+    });
+  }
 
-  orderPanelToggleBtnsList[1].addEventListener('click', function() {
-    disableAllActiveInfoBlocks();
-    this.classList.add('order-toggle-button--active');
-    shipInfoList[0].classList.add('order-panel-ship-info--active');
-    orderPanelSlidersList[0].classList.add('order-panel-slider--active');
-    submenu.classList.remove('buttons-wrapper-helper--active');
-    replaceMobileCurrentBtn(this.cloneNode(true))
-  });
-
-  console.log(orderPanelToggleBtnsList);
+  console.log(orderPanelToggleBtnsList, shipInfoList);
 })();

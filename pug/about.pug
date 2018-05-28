@@ -1,0 +1,14 @@
+doctype html
+html
+    include templates/head
+    body.about-page
+        header.page-header
+            include templates/header-nav
+        include templates/about-us-info
+        include templates/about-us-callback
+        include templates/footer-block
+        include templates/order-popup-block
+        script(src='js/vendor/jquery-3.2.1.min.js')
+        script(src='js/vendor/swiper/js/swiper.min.js')
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")        
+        script(src='js/sliderConfig.js')

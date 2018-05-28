@@ -82,6 +82,17 @@
 .schedule-table tr td:first-of-type:hover:after {
   display: none;
 }
+.schedule-table--sl {
+
+}
+.schedule-table--sl tr:nth-of-type(n + 8) td:nth-of-type(n + 2) {
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover:after {
+    display: flex;
+  }
+}
 //.schedule-table--ss tr:nth-of-type(n + 15) td:nth-of-type(n + 2) {
 //  background-color: #eee;
 //  cursor: auto;

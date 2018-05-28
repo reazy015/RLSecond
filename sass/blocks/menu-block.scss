@@ -102,6 +102,10 @@
 .menu-example-block {
   flex: 1 1 48%;
 
+  &:nth-of-type(2) {
+    margin-right: 0;
+  }
+
   @media (max-width: 1020px) {
     flex: 1 1 auto;
   }
@@ -200,6 +204,7 @@
   color: $font-dark-blue-label;
 }
 .menu-wrapper {
+  position: relative;
   display: flex;
 }
 .menu--sl .menu-example {
@@ -250,7 +255,8 @@
 }
 .menu-controls-active-marker {
   position: absolute;
-  right: 0;
+  right: 5px;
+  top: 225px;
   width: 0;
   height: 0;
   border-top: 25px solid transparent;
@@ -284,4 +290,113 @@
 }
 .menu-example-wrapper .menu-example-block {
   margin-right: 35px;
+
+  &:nth-of-type(2n) {
+    margin-right: 0;
+  }
+}
+.menu-price-mobile {
+  display: none;
+}
+@media (max-width: 1260px) {
+  .menu--sl .menu-wrapper {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 15px;
+  }
+  .menu--sl .menu-example {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .menu-controls-list {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  .menu--sl .menu-example-wrapper {
+    width: 100%;
+  }
+  .menu-controls-active-marker {
+    display: none;
+  }
+}
+
+@media (max-width: 1076px) {
+
+}
+@media (max-width: 1023px) {
+  .menu--sl .menu-example-wrapper--active {
+    display: block;
+  }
+  .menu--sl .menu-example-block {
+    margin-right: 0;
+  }
+  .menu--sl .menu-example-wrapper--active .menu-example-list-item {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .menu--sl .menu-example-wrapper--active .menu-example__header {
+    text-align: center;
+  }
+}
+@media (max-width: 880px) {
+
+  .menu-price-mobile__current {
+    @include list-reset;
+    list-style: none;
+  }
+  .menu-price-mobile {
+    display: flex;
+    background-color: #edf7ff;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    cursor: pointer;
+  }
+  .menu-example-controls {
+    display: none;
+
+    &--open {
+      display: block;
+      background-color: #edf7ff;
+      position: absolute;
+      top: 95px;
+      left: 10px;
+      right: 10px;
+      animation: fadeIn .3s ease-in-out;
+
+      .menu-controls-list {
+        display: block;
+        padding-top: 0;
+      }
+      .menu-controls-item {
+        padding-left: 15px;
+        transition: background-color .3s;
+
+        &:hover {
+          background-color: darken($table-azure, 2);
+        }
+      }
+    }
+  }
+  .menu-controls-item {
+    opacity: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+  }
+  .menu-controls-item span{
+    color: $dark-blue!important;
+    opacity: 1!important;
+  }
+  .menu-controls-item span:first-of-type {
+    font-size: 24px;
+  }
+  .menu-controls-item span:last-of-type {
+    font-size: 14px;
+  }
+}
+.menu--sl .menu-intro-wrapper {
+  background-image: none;
 }

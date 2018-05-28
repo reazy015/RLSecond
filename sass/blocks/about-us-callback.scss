@@ -1,0 +1,23 @@
+.about-us-callback {
+	padding-top: 80px;
+	padding-bottom: 95px;
+}
+.about-us-callback .container {
+	max-width: 875px;
+	margin: auto;
+}
+.callback-form {
+	display: flex;
+	flex-wrap: wrap;
+}
+.callback-form input[name="name"],
+.callback-form input[name="phone"] {
+	flex: 0 1 50%;
+}
+.callback-form textarea {
+	flex: 1 1 100%;
+	resize: none;
+}
+.callback-form input[type="submit"] {
+	flex: 0 1 210px;
+}

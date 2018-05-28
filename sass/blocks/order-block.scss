@@ -223,6 +223,7 @@
 }
 .order-panel-ship-info {
   display: none;
+  animation: fadeIn .4s ease-in-out;
   
   &--active {
     display: block;
@@ -236,13 +237,16 @@
   z-index: -100;
   width: 400px;
   overflow: hidden;
-  
+
+
   &--active {
     display: flex;
     position: relative;
     visibility: visible;
     left: 0;
     z-index: 10;
+    animation: fadeIn .4s ease-in-out;
+
   }
 
   & img {
@@ -454,5 +458,9 @@
   z-index: 20;
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.1);
+}
+.routes--sl .buttons-wrapper-helper,
+.routes--sl .order-panel-toggle {
+  width: 100%;
 }
 

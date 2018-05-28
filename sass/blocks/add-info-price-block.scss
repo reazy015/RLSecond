@@ -53,4 +53,28 @@
   top: 0;
   background-image: url(../img/icons/add-info-marker.svg);
 }
-
+@media (max-width: 1180px) {
+  .add-info-decor-wrapper {
+    position: static;
+    width: 100%;
+    padding: 0;
+    transform: translate(0, 0);
+  }
+}
+@media (max-width: 1024px) {
+  .add-info-descr {
+    padding-left: 10px;
+    padding-right: 5px;
+  }
+  .add-info-list__item {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 860px) {
+  .add-info-schema {
+    height: 340px;
+  }
+  .add-info {
+    display: block;
+  }
+}

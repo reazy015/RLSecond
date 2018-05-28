@@ -6,6 +6,8 @@ window.menuSwitchPanel = (function () {
   var menuControlsList = document.querySelector('.menu-controls-list');
   var menusExamplesList = document.querySelectorAll('.menu-example-wrapper');
   var menuControlsListTop = menuControlsList.getBoundingClientRect().top;
+  var currentMobilePrice = document.querySelector('.menu-price-mobile__current');
+  var controlsList = document.querySelector('.menu-example-controls');
 
 
   function getActiveBoxCoordinates(item) {
@@ -33,9 +35,9 @@ window.menuSwitchPanel = (function () {
       deactivateAllMenuExamples();
       menusExamplesList[target].classList.add('menu-example-wrapper--active');
       this.classList.add('menu-controls-item--active');
-      activeMarker.style.top = getActiveBoxCoordinates(this).top + this.offsetHeight  + 'px';
+      currentMobilePrice.replaceChild(this.cloneNode(true), currentMobilePrice.firstElementChild);
+      controlsList.classList.toggle('menu-example-controls--open');
+      activeMarker.style.top = this.offsetTop +  'px';
     });
   }
-
-  activeMarker.style.top = getActiveBoxCoordinates(document.querySelector('.menu-controls-item--active')).top + 'px';
 })();

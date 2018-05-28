@@ -45,3 +45,40 @@
   font-size: 16px;
   color: #145378;
 }
+@media (max-width: 732px) {
+  .for-list {
+
+  }
+}
+@media (max-width: 1180px) {
+  .for {
+    padding-top: 55px;
+  }
+  .for-list-item {
+
+
+    &:nth-of-type(5) {
+      padding-left: 25px;
+    }
+
+    &:nth-of-type(7) {
+      padding-right: 25px;
+    }
+  }
+}
+@media (max-width: 500px) {
+  .for {
+
+  }
+  .for-list-item {
+
+
+    &:nth-of-type(5) {
+      padding-left: 0;
+    }
+
+    &:nth-of-type(7) {
+      padding-right: 0;
+    }
+  }
+}

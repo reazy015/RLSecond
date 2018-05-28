@@ -115,3 +115,23 @@
 .price--sl .price__header {
   margin-top: 0;
 }
+@media (max-width: 1180px) {
+  .price--sl {
+    padding-bottom: 25px;
+  }
+}
+@media (max-width: 760px) {
+  .mobile-table-wrapper {
+    overflow-x: scroll;
+  }
+  .price--sl .mobile-table-wrapper table{
+    width: 860px;
+  }
+}
+.price--sl .mobile-table-wrapper table tr td:first-child {
+  width: 75px;
+}
+.price--sl .price-ship__names span {
+  font-size: 24px!important;
+  color: gold;
+}
