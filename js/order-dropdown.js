@@ -29,6 +29,8 @@ window.orderDropdown = (function (){
       this.classList.add('order-toggle-button--active');
       shipInfoList[this.dataset.target - 1].classList.add('order-panel-ship-info--active');
       orderPanelSlidersList[this.dataset.target - 1].classList.add('order-panel-slider--active');
+      replaceMobileCurrentBtn(this.cloneNode(true));
+      submenu.classList.remove('buttons-wrapper-helper--active');
     });
   }
 

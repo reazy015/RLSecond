@@ -11,6 +11,10 @@
   text-align: center;
   color: #145378;
   margin-bottom: 36px;
+
+  @media (max-width: 680px) {
+    font-size: 32px;
+  }
 }
 .for-decor-wrapper {
   text-align: center;

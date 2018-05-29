@@ -1,0 +1,41 @@
+section.payment-block
+	div.container
+		h1.payment-block__header Страница оплаты
+		p.payment-block__comment Ваши данные никогда не будут переданы третьим лицам.
+		form.payment-form
+			div.payment-input-wrapper
+				input(type="text", name="phone", placeholder="Телефон", required).payment-form__input
+				input(type="text", name="name", placeholder="ФИО", required).payment-form__input
+				input(type="text", name="mail", placeholder="Почта", required).payment-form__input
+				input(type="text", name="sum", placeholder="Сумма оплаты", required).payment-form__input
+			div.payment-type
+				div.payment-type__comment Выберите способ оплаты:
+				div.payment-type-wrapper
+					label.payment-type-item
+						input(type="radio", name="payment-type", value="visa")
+						div
+							div.payment-type-img-wrapper
+								img(src="./img/icons/visa-icon-img.jpg", alt="paymenyt-type-img")
+							div.payment-type-item__name Cо банковской карты Visa/Mastercard 
+					label.payment-type-item
+						input(type="radio", name="payment-type", value="webmoney" checked)
+						div
+							div.payment-type-img-wrapper
+								img(src="./img/icons/webmoney-icon.jpg", alt="paymenyt-type-img")
+							div.payment-type-item__name Cо счета WebMoney
+					label.payment-type-item
+						input(type="radio", name="payment-type", value="yandex-money")
+						div
+							div.payment-type-img-wrapper
+								img(src="./img/icons/yandex-icon.jpg", alt="paymenyt-type-img")
+							div.payment-type-item__name Cо счета в Яндекс.Деньгах
+					label.payment-type-item
+						input(type="radio", name="payment-type", value="terminal")
+						div
+							div.payment-type-img-wrapper
+								img(src="./img/icons/terminal-icon.jpg", alt="paymenyt-type-img")
+							div.payment-type-item__name Cо коду через терминал в магазинах города
+				label.payment-agreement
+					input(type="checkbox", name="agreement", required, checked)
+					span Я согласен с #[a(href="#") условиями договора] и #[a(href="") политикой конфиденциальности]
+				input(type="submit", value="Оплатить", class="payment-form__submit")

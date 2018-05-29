@@ -35,6 +35,7 @@
 }
 .menu__header {
   @include anaphora;
+  margin-top: 0;
   font-size: 48px;
   color: $dark-blue;
   margin-bottom: 25px;
@@ -170,13 +171,21 @@
 
   }
 }
+.menu--sl {
+  padding-top: 25px;
+}
 .menu--sl .menu__header {
+  margin-top: 0;
+  padding-left: 15px;
+  padding-right: 15px;
   color: $basic-white;
 }
 .menu--sl .menu-wrapper {
   margin-top: 75px;
 }
 .menu--sl .menu__comment {
+  padding-left: 15px;
+  padding-right: 15px;
   margin-bottom: 52px;
 }
 .menu--sl .menu-intro-left {
