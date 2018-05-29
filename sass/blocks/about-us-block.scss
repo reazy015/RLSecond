@@ -3,12 +3,25 @@
 	margin: auto;
 	padding-top: 100px;
 	padding-bottom: 140px;
+
+	@media (max-width: 768px) {
+		padding-top: 25px;
+		padding-bottom: 25px;
+	}
 }
 .about-us__header {
+	@include anaphora;
 	margin-top: 0;
 	margin-bottom: 50px;
 	padding-left: 55px;
 	padding-right: 55px;
+	font-size: 48px;
+	color: $dark-blue;
+
+	@media (max-width: 924px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 }
 .about-us-img-wrapper {
 	width: 100%;
@@ -18,10 +31,28 @@
 	& img {
 		width: 100%;
 	}
+
+	@media (max-width: 768px) {
+		margin-top: 25px;
+		margin-bottom: 30px;
+	}
 }
 
 .about-us__text {
+	@include gotham-reg;
 	padding-left: 55px;
 	padding-right: 55px;
 	margin-bottom: 40px;
+	font-size: 16px;
+	color: #84aac1;
+	line-height: 1.8;
+
+	@media (max-width: 924px) {
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+
+	@media (max-width: 768px) {
+		margin-bottom: 20px;
+	}
 }
