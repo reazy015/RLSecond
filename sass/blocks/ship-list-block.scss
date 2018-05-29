@@ -1,0 +1,115 @@
+.ship-list-block {
+	padding-top: 90px;
+	padding-bottom: 90px;
+	flex-grow: 1;
+	background: url(../img/bg/ship-list-bg.jpg) no-repeat;
+	background-size: cover;
+	background-position: 100% 0%;
+
+	@media (max-width: 768px) {
+		padding-top: 55px;
+		padding-bottom: 45px;
+	}
+}
+.ship-list-block .container {
+	max-width: 1175px;
+	margin: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.ship-list__header {
+	@include anaphora;
+	margin-top: 0;
+	font-size: 48px;
+	color: $basic-white;
+
+	@media (max-width: 680px) {
+		font-size: 38px;
+	}
+}
+.ship-list-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@media (max-width: 680px) {
+		display: block;
+	}
+}
+.ship-item {
+	display: block;
+	flex: 0 1 49%;
+	margin-bottom: 25px;
+	padding: 52px 0px 45px 50px;	
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: right bottom;
+	color: $basic-white;
+	text-decoration: none;
+	cursor: pointer;
+	transition: outline .2s;
+
+	&--pbg {
+		background-image: url(../img/bg/ship-item-pbg.jpg);
+	}
+
+	&--fbg {
+		background-image: url(../img/bg/ship-item-fbg.jpg);
+	}
+
+	&--mbg {
+		background-image: url(../img/bg/ship-item-mbg.jpg);
+	}
+
+	&--dbg {
+		background-image: url(../img/bg/ship-item-dbg.jpg);
+	}
+
+	&:hover {
+		outline-width: 2px;
+		outline-color: $basic-white;
+		outline-style: solid;
+	}
+
+	@media (max-width: 860px) {
+		padding: 15px;
+	}
+
+	@media (max-width: 680px) {
+		margin-bottom: 20px;
+	}
+}
+.ship-item__category {
+	@include gotham-reg;
+	font-size: 16px;
+}
+.ship-item__name {
+	@include anaphora;
+	margin-top: 0;
+	font-size: 42px;
+	font-weight: normal;
+
+	@media (max-width: 680px) {
+		margin-top: 10px;
+		font-size: 38px;
+	}
+}
+.ship-info-wrapper {
+	display: flex;
+}
+.ship-info-block {
+	margin-right: 65px;
+
+	@media (max-width: 860px) {
+		margin-right: 15px;
+	}
+}
+.ship-info__prop {
+	@include gotham-reg;
+	margin-bottom: 10px;
+	font-size: 12px;
+}
+.ship-info__value {
+	@include gotham-bold;
+	font-size: 24px;
+}

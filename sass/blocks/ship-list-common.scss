@@ -1,0 +1,13 @@
+.ship-list {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+
+	& .page-header {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: $dark-blue;
+		border-bottom: 10px solid #214863;
+		background-image: none;
+	}
+}
