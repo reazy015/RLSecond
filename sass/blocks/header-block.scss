@@ -17,6 +17,9 @@
     padding-bottom: 190px;
   }
 }
+.page-header--ls .page-header__header {
+  max-width: 680px;
+}
 .page-header-top-wrapper {
   display: flex;
 }
@@ -68,18 +71,24 @@
     }
   }
 }
-.header-nav-list-item--active {
-  position: relative;;
+.header-nav-list-item {
+  position: relative;
 
   &:after {
     position: absolute;
     display: block;
     content: '';
     top: 120%;
-    left: 0;
-    right: 0;
+    left: 50%;
+    width: 0;
+    transform: translate(-50%);
     height: 2px; 
     background-color: $table-azure;
+    transition: all .3s;
+  }
+
+  &:hover:after {
+    width: 100%;
   }
 }
 .page-header-logo-wrapper {

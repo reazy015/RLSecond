@@ -1,0 +1,114 @@
+.price-page {
+	& .page-header {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		background-color: $dark-blue;
+		border-bottom: 10px solid #214863;
+		background-image: none;	
+	}
+
+	& .price {
+		padding-bottom: 100px;
+		background-color: $basic-white;
+		background-image: none;
+	}
+
+	& .price__header {
+		color: $dark-blue;
+	}
+
+	& .price__comment {
+		@include gotham-bold;
+		font-size: 16px;
+		color: #00bac0;
+	}
+
+	& .price-ship__names {
+		margin-bottom: 10px;
+		color: $dark-blue;
+	}
+
+	& .price-ship-info-class__header {
+		color: #84aac1;
+	}
+
+	& .price-ship-info-class__class {
+		@include gotham-bold;
+		color: $dark-blue;
+	}
+
+	& .mobile-table-wrapper {
+		@media (max-width: 768px) {
+			overflow-x: scroll; 
+		}
+	}	
+
+	& table.site-price-table  {		
+	  border-collapse: collapse;
+	  width: 100%;
+	  border: 1px solid #b2eaec;
+	}
+
+	& table.site-price-table:not(.site-price-table--type) {
+		@media (max-width: 768px) {
+	  		width: 1024px;
+	  	}
+	}
+
+	& table.site-price-table td {
+	  @include gotham-reg;	
+	  height: 80px;
+	  width: calc( 100% / 7 );
+	  font-size: 14px;
+	  text-align: center;	
+	  border-collapse: collapse;
+	  border: 1px solid #b2eaec;
+	  color: $dark-blue;
+	}
+
+	& table.site-price-table tr:nth-of-type(2n + 1) {
+		background-color: #edf7ff;
+	}
+
+	& table.site-price-table tr:first-of-type td:first-of-type {
+		@include gotham-bold;
+		text-align: center;
+	}
+
+	& table.site-price-table tr:nth-of-type(2n + 1) td:first-of-type {
+		@include gotham-bold;
+		color: #07bdae;
+		text-align: center;
+	}
+
+	& table.site-price-table th {
+	  @include gotham-bold;
+	  font-size: 14px;
+	  text-transform: uppercase;
+	  height: 35px;		
+	  border-collapse: collapse;
+	  border: 1px solid #b2eaec;
+	  color: $basic-white;
+	  background-color: #00bac0;
+	}
+
+	& table.site-price-table--type tr td {
+		width: 100%;
+	}
+
+	& table.site-price-table--type tr td:first-of-type {
+		width: calc( 100% / 7 );
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+
+	&  .price-additional-info {
+		color: #84aac1;
+		font-size: 14px;
+	}
+
+	& .mobile-table-wrapper--last {
+		margin-top: 85px;
+	}
+	
+}

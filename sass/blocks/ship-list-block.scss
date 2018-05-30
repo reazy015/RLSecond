@@ -47,7 +47,7 @@
 	color: $basic-white;
 	text-decoration: none;
 	cursor: pointer;
-	transition: outline .2s;
+	transition: box-shadow .3s;
 
 	&--pbg {
 		background-image: url(../img/bg/ship-item-pbg.jpg);
@@ -66,9 +66,7 @@
 	}
 
 	&:hover {
-		outline-width: 2px;
-		outline-color: $basic-white;
-		outline-style: solid;
+		box-shadow: 0 0 0 2px $basic-white;
 	}
 
 	@media (max-width: 860px) {
