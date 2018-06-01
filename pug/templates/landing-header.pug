@@ -1,40 +1,38 @@
-header.page-header.page-header--ls.page-header--fl
+header.page-header.page-header--ls
     div.container.container--header
-        div.fixed-header-wrapper
+        div.nav-fixed-wrapper.scroll-nav
             div.page-header-top-wrapper
                 div.page-header-logo-wrapper
                     a(href='index.html')
                         img(src='img/icons/logo-w.svg', alt='logo-img')
-                div.page-header-nav-wrapper                    
+                div.page-header-nav-wrapper
+                    div.page-header__phone +7 (812) 629-13-80
                     nav.page-header-nav
-                        ul.page-header-nav-list
-                            li.header-nav-list-item.header-nav-list-item--phone
-                                a(href='./ship-list.html') +7 (812) 629-13-80                      
+                        ul.page-header-nav-list                            
                             li.header-nav-list-item
-                                a(href='./ship-list.html') Теплоходы
+                                a(href='#ships') Теплоходы
                             li.header-nav-list-item
-                                a(href='#schedule') Расписание
+                                a(href='#schedule') Забронировать
                             li.header-nav-list-item
-                                a(href='./price.html') Цены
+                                a(href='#price') Цены
                             li.header-nav-list-item
-                                a(href='#conditions') Информация
-                            li.header-nav-list-item
-                                a(href='#conditions') Назначение
+                                a(href='./payment.html') Оплата                       
                             li.header-nav-list-item
                                 a(href='#menu') Меню
                             li.header-nav-list-item
-                                a(href='./about.html') О компании                        
+                                a(href='#about') О компании
+                            li.header-nav-list-item
+                                a(href='./news-item.html') Новости
                             li.header-nav-list-item
                                 a(href='#contacts') Контакты
-
-            div.nav-toggle-btn
-                span
-                span
-                span
+                div.nav-toggle-btn
+                    span
+                    span
+                    span
         h1.page-header__header Экскурсии и мероприятия на комфортабельных речных теплоходах River Line
         p.page-header__text Приятный интерьер, бар и ресторанная еда Sadko
         div.page-header-callback-controls
             div.callback-btn-wrapper
                 button.page-header__callback Забронируйте по телфону
             div.callback-btn-wrapper
-                button.page-header__callback.page-header__callback--sc Выберите дату из расписания
+                a(href="#schedule").page-header__callback.page-header__callback--sc Выберите дату из расписания
