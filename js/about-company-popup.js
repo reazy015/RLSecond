@@ -4,6 +4,21 @@ window.aboutPopup = (function (){
   var licenseItemsList = document.querySelectorAll('.license-item');
   var sliderPopupWrapper = document.querySelector('.slider-popup-wrapper');
   var sliderPopupModal = sliderPopupWrapper.querySelector('.slider-popup-slide');
+  var closePopupBtn = sliderPopupWrapper.querySelector('.slider-popup-slide')
+
+
+  function createCloseBtn() {
+    var div = document.createElement('div');
+    var i = document.createElement('i');
+
+    div.classList.add('slider-popup-slide__close');
+    i.classList.add('fas');
+    i.classList.add('fa-times')
+
+    div.appendChild(i);
+
+    return div;
+  }
 
   function closeOnOuterClick(evt) {
     var target = evt.target;
@@ -28,7 +43,8 @@ window.aboutPopup = (function (){
       evt.stopPropagation();
       sliderPopupWrapper.classList.toggle('slider-popup-wrapper--active');
       sliderPopupModal.classList.toggle('slider-popup-slide--docs');
-      sliderPopupModal.appendChild(createImg(this.querySelector('img').src));
+      sliderPopupModal.appendChild(createCloseBtn());
+      sliderPopupModal.appendChild(createImg(this.querySelector('img').src));      
       document.addEventListener('click', closeOnOuterClick);
     });
   }

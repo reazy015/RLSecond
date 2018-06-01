@@ -57,7 +57,7 @@ window.passengerBox = ( function() {
       totalPrice = totalPrice + Number.parseFloat(allPassengersPrice[i].textContent);
     }
 
-    orderPriceElement.textContent = totalPrice;
+    orderPriceElement.value = totalPrice;
   }
 
   function updateAlldayPrice() {

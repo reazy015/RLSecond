@@ -27,11 +27,13 @@
   animation-fill-mode: forwards;
 
   &--docs {
+    position: relative;
     top: 8%;
     width: 30%;
     height: 40%;
 
     @media (max-width: 768px) {
+      top: 10%;
       width: 25%;
       height: 35%;
     }
@@ -47,9 +49,27 @@
   }
 
   @media (max-width: 560px) {
-    top: 25px;
+    top: 8%;
   }
 }
+.slider-popup-slide__close {
+  position: absolute;
+  top: -35px;
+  right: -35px;
+  font-size: 32px;
+  color: $basic-white;
+  transition: color .3s;
+  cursor: pointer;
+
+  &:hover {
+    color: $table-azure;
+  }
+
+  @media (max-width: 1024px) {
+    right: 0;
+  }
+}
+
 @keyframes scaleUp {
   from {transform: scale(0)}
   to {transform: scale(1)}

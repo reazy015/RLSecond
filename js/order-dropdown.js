@@ -15,7 +15,7 @@ window.orderDropdown = (function (){
     for (var i = 0; i < orderPanelToggleBtnsList.length; i++) {
      orderPanelToggleBtnsList[i].classList.remove('order-toggle-button--active');
      shipInfoList[i].classList.remove('order-panel-ship-info--active');
-     orderPanelSlidersList[i].classList.remove('order-panel-slider--active');
+     orderPanelSlidersList[i].classList.remove('order-panel-slider--active')
     }
   }
 
@@ -23,16 +23,40 @@ window.orderDropdown = (function (){
     dropdownBtn.replaceChild(item, dropdownBtn.firstElementChild)
   }
 
-  for (var i = 0; i < orderPanelToggleBtnsList.length; i++) {
-    orderPanelToggleBtnsList[i].addEventListener('click', function(evt) {
-      disableAllActiveInfoBlocks();
-      this.classList.add('order-toggle-button--active');
-      shipInfoList[this.dataset.target - 1].classList.add('order-panel-ship-info--active');
-      orderPanelSlidersList[this.dataset.target - 1].classList.add('order-panel-slider--active');
-      replaceMobileCurrentBtn(this.cloneNode(true));
-      submenu.classList.remove('buttons-wrapper-helper--active');
-    });
-  }
+  orderPanelToggleBtnsList[0].addEventListener('click', function() {
+    disableAllActiveInfoBlocks();
+    this.classList.add('order-toggle-button--active');
+    shipInfoList[1].classList.add('order-panel-ship-info--active');
+    orderPanelSlidersList[1].classList.add('order-panel-slider--active');
+    submenu.classList.remove('buttons-wrapper-helper--active');
+    replaceMobileCurrentBtn(this.cloneNode(true))
+  });
 
-  console.log(orderPanelToggleBtnsList, shipInfoList);
+  orderPanelToggleBtnsList[1].addEventListener('click', function() {
+    disableAllActiveInfoBlocks();
+    this.classList.add('order-toggle-button--active');
+    shipInfoList[1].classList.add('order-panel-ship-info--active');
+    orderPanelSlidersList[1].classList.add('order-panel-slider--active');
+    submenu.classList.remove('buttons-wrapper-helper--active');
+    replaceMobileCurrentBtn(this.cloneNode(true))
+  });
+
+    orderPanelToggleBtnsList[2].addEventListener('click', function() {
+    disableAllActiveInfoBlocks();
+    this.classList.add('order-toggle-button--active');
+    shipInfoList[2].classList.add('order-panel-ship-info--active');
+    orderPanelSlidersList[2].classList.add('order-panel-slider--active');
+    submenu.classList.remove('buttons-wrapper-helper--active');
+    replaceMobileCurrentBtn(this.cloneNode(true))
+  });
+
+  orderPanelToggleBtnsList[3].addEventListener('click', function() {
+    disableAllActiveInfoBlocks();
+    this.classList.add('order-toggle-button--active');
+    shipInfoList[3].classList.add('order-panel-ship-info--active');
+    orderPanelSlidersList[3].classList.add('order-panel-slider--active');
+    submenu.classList.remove('buttons-wrapper-helper--active');
+    replaceMobileCurrentBtn(this.cloneNode(true))
+  });
+ 
 })();

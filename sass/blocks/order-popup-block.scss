@@ -131,6 +131,10 @@
     margin-top: 0;
   }
 }
+.popup-module-input-wrapper--contacts {
+  display: flex;
+  flex-wrap: nowrap;
+}
 .popup-module-form {
   transition: all .3s;
 }
@@ -198,11 +202,15 @@
   display: none;
 }
 .begin-time-wrapper {
+  display: flex;
   flex: 1 1 auto;
 }
 .begin-time {
   flex: 1 1 100%;
-  margin-right: 45px;
+
+  &:first-of-type {
+    margin-right: 15px;
+  }
 
   @media (max-width: 735px) {
     margin-right: 0px;
@@ -234,6 +242,15 @@
 
   @media (max-width: 735px) {
     margin-bottom: 15px;
+  }
+}
+.popup-module-input-wrapper--contacts .popup-module-form__input {
+  flex-grow: 1;  
+  width: calc( 100% / 3 );
+  margin-right: 15px;
+
+  &:last-of-type {
+    margin-right: 0px;
   }
 }
 .popup-module__close {
@@ -488,4 +505,46 @@ input[name="passenger-type"] {
 }
 .passenger-info-block-animate {
   animation: .3 slideInRight;
+}
+.user-type input[type="radio"] {
+  display: none;
+}
+.user-type span {
+  position: relative;
+  padding-left: 25px;
+  padding-right: 15px;
+  cursor: pointer;
+
+  &:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 0 0 0 1px;
+    border-radius: 50%;
+    transition: background-color .3s;
+  }
+
+  &:after {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 5px;
+    height: 5px;
+    left: 5px;
+    top: 50%;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background-color: $basic-white;
+    transition: background-color .3s;
+  }
+}
+
+.user-type input[type="radio"]:checked ~ span:before {
+  background-color: $table-azure;
+  box-shadow: none;
 }

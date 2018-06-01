@@ -1,34 +1,32 @@
 div.container.container--header
-    div.page-header-top-wrapper
-        div.page-header-logo-wrapper
-            a(href='index.html')
-                img(src='img/icons/logo-w.svg', alt='logo-img')
-        div.page-header-nav-wrapper.page-header-nav-wrapper--sl
-            div.page-header__phone
-                a(href="").phone-link +7 (812) 629-13-80
-            nav.page-header-nav
-                ul.page-header-nav-list
-                    li.header-nav-list-item 
-                        a(href='./index.html') Главная
-                    li.header-nav-list-item
-                        a(href='./ship-list.html') Теплоходы
-                    li.header-nav-list-item
-                        a(href='#schedule') Расписание
-                    li.header-nav-list-item
-                        a(href='./price.html') Цены
-                    li.header-nav-list-item
-                        a(href='#conditions') Условия
-                    li.header-nav-list-item
-                        a(href='./payment.html') Виды мероприятий
-                    li.header-nav-list-item
-                        a(href='#menu') Меню
-                    li.header-nav-list-item
-                        a(href='./about.html') О компании
-                    li.header-nav-list-item
-                        a(href='#contacts') Контакты
-
-        div.nav-toggle-btn
-            span
-            span
-            span
-        
+    div.nav-fixed-wrapper.scroll-nav
+        div.page-header-top-wrapper
+            div.page-header-logo-wrapper
+                a(href='index.html')
+                    img(src='img/icons/logo-w.svg', alt='logo-img')
+            div.page-header-nav-wrapper
+                div.page-header__phone +7 (812) 629-13-80
+                nav.page-header-nav
+                    ul.page-header-nav-list
+                        li.header-nav-list-item.header-nav-list-item--active
+                            a(href='./index.html') Главная
+                        li.header-nav-list-item
+                            a(href='./ship-list.html') Теплоходы
+                        li.header-nav-list-item
+                            a(href='#schedule') Забронировать
+                        li.header-nav-list-item
+                            a(href='./price.html') Цены
+                        li.header-nav-list-item
+                            a(href='./payment.html') Оплата                       
+                        li.header-nav-list-item
+                            a(href='#menu') Меню
+                        li.header-nav-list-item
+                            a(href='./about.html') О компании
+                        li.header-nav-list-item
+                            a(href='./news-item.html') Новости
+                        li.header-nav-list-item
+                            a(href='#contacts') Контакты
+            div.nav-toggle-btn
+                span
+                span
+                span
