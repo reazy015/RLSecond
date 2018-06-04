@@ -158,6 +158,7 @@
   }
 }
 .custom-select-actual {
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -187,7 +188,8 @@
   visibility: hidden;
   position: absolute;
   top: 110%;
-  width: 90%;
+  left: 0;
+  width: 100%;
   height: 230px;
   overflow-Y: scroll;
   will-change: auto;

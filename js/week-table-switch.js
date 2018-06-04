@@ -220,8 +220,13 @@ window.weekTableSwithc = (function () {
 
   timeSwitchList[0].addEventListener('click', function(evt) {
     var target = evt.target;
-    timeInputsList[0].value = target.dataset.time;
-    this.classList.remove('begin-time-variants-list--open');
+    timeInputsList[0].value = target.dataset.time;    
+  });  
+
+  timeSwitchList[1].addEventListener('click', function(evt) {
+    console.log(this);
+    var target = evt.target;
+    timeInputsList[1].value = target.dataset.time;    
   });  
 
 })();
