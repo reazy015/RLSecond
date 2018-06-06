@@ -11,13 +11,14 @@
 	background-color: $basic-white;
 	z-index: 100500;
 	transition: opacity .7s;
+	background-color: $light-blue;
 }
 .preloader--fadeout {
 	opacity: 0;		
 }
 .preloader-gif-img-wrapper {
 	position: fixed;
-	width: 150px;
+	width: 300px;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
