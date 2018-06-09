@@ -16,11 +16,15 @@
 }
 .preloader-gif-img-wrapper {
 	position: fixed;
-	width: 300px;
+	width: 150px;
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
 	text-align: center;
+}
+.preloader-gif-img-wrapper img{
+	width: 100%;
+	height: auto;
 }
 .ymaps-2-1-64-map {
 	width: 100%!important;
