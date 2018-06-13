@@ -8,41 +8,16 @@ div.popup-wrapper
                 div.time-input-wrapper
                     div.custom-select.begin-time-wrapper
                         div.custom-select-actual.begin-time
-                            input(type='text', name='start-time', data-readonly, value='12:00', required).time-input
+                            input(type='text', name='start-time', data-readonly, required).time-input
                             i.fas.fa-chevron-down
                             ul.custom-select-variant-list.begin-time-variants-list
-                                li(data-time='11:00').variant-list-item
-                                    span 11:00
-                                li(data-time='12:30').variant-list-item
-                                    span 12:30
-                                li(data-time='14:00').variant-list-item
-                                    span 14:00
-                                li(data-time='15:30').variant-list-item
-                                    span 15:30
-                                li(data-time='17:00').variant-list-item
-                                    span 17:00
-                                li(data-time='18:30').variant-list-item
-                                    span 18:30
-                                li(data-time='20:00').variant-list-item
-                                    span 20:00
+
+
                         div.custom-select-actual.begin-time
                             input(type='text', name='start-time', data-readonly, value='12:00', required).time-input
                             i.fas.fa-chevron-down
                             ul.custom-select-variant-list.begin-time-variants-list
-                                li(data-time='11:00').variant-list-item
-                                    span 11:00
-                                li(data-time='12:30').variant-list-item
-                                    span 12:30
-                                li(data-time='14:00').variant-list-item
-                                    span 14:00
-                                li(data-time='15:30').variant-list-item
-                                    span 15:30
-                                li(data-time='17:00').variant-list-item
-                                    span 17:00
-                                li(data-time='18:30').variant-list-item
-                                    span 18:30
-                                li(data-time='20:00').variant-list-item
-                                    span 20:00
+
             div.input-wrapper__instruction
                 label.user-type
                     input(type='radio', name='user-type')
@@ -53,7 +28,7 @@ div.popup-wrapper
             div.popup-module-input-wrapper.popup-module-input-wrapper--contacts                
                 input(type='text', name='name', placeholder='Имя', required).popup-module-form__input
                 input(type='text', name='phone', placeholder='Телефон', required).popup-module-form__input
-                input(type='text', name='mail', placeholder='info@website.com', required).popup-module-form__input    
+                input(type='text', name='mail', placeholder='E-mail', required).popup-module-form__input    
             div.popup-module-input-wrapper.popup-module-input-wrapper--agreement
                 label
                     input(type='checkbox', name='agreement', required, checked)
@@ -62,6 +37,7 @@ div.popup-wrapper
                 input(type='submit', value='Забронировать').popup-module-form__submit
                 div.order-price
                     span.order-price__header Стоимость:
-                    span.order-price__number 700
+                    span.order-price__number
+                        input(type='text', name="sum", value="", data-price="", data-readonly, required).order-price__sum
                     span.order-price__currency руб.
         span.popup-module__close

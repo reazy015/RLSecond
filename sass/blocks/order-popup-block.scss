@@ -550,3 +550,10 @@ input[name="passenger-type"] {
   background-color: $table-azure;
   box-shadow: none;
 }
+.order-price__sum {
+  @include gotham-bold;
+  font-size: 30px;
+  color: #44ccd1;
+  width: 120px;
+  border: none;
+}
