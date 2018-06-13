@@ -138,8 +138,7 @@ window.weekTableSwitch = (function () {
       var month = date.getMonth() < 10 ? '0' + date.getMonth() : date.getMoth();
 
       listElementText.textContent += ' ' + day + '.' + month;
-    }  
-
+    }
 
     listElement.classList.add('variant-list-item');
     listElement.setAttribute('data-time', listElementText.textContent);
@@ -156,13 +155,15 @@ window.weekTableSwitch = (function () {
    
 
     for (var i = 0; i < 24; i++) {
-      date.addHour(1);
+      
 
       if (initialDate.getDate() < date.getDate()) {
         timeSwitchList[1].appendChild(createTimeListItem(date.getHours(), true, date));
       } else {
         timeSwitchList[1].appendChild(createTimeListItem(date.getHours(), false, date));
-      }      
+      }  
+
+      date.addHour(1);    
     }    
   }
 
