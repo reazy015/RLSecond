@@ -1,0 +1,16 @@
+doctype html
+html
+    include templates/head
+    body.about-page
+        header.page-header
+            include templates/header-nav
+        include templates/news-list-block
+        include templates/contacts
+        include templates/footer-block
+        script(src='js/vendor/jquery-3.2.1.min.js')
+        script(src='js/vendor/swiper/js/swiper.min.js')
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")        
+        script(src='js/sliderConfig.js')
+        script(src='js/scroll-nav.js')
+        script(src='js/adaptiveMenu.js')
+        script(src='js/yandex-map-config.js')

@@ -35,6 +35,9 @@ window.weekTableSwitch = (function () {
   var mondayBlock = document.querySelector('.schedule-panel-date__info .monday');
   var sundayBlock = document.querySelector('.schedule-panel-date__info .sunday');
   var mondayHeader = mainTable.querySelector('.mon');
+  var userTypeRadios = document.querySelectorAll('.user-type__radio');
+  var userMailInput = document.querySelector('input[name="mail"]');
+  var successBlock = document.querySelector('.success-block');
   var datesTableHeadersCounter = datesTableHeaders.length;
   var monthDictionary = ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь', 'Июль','Август', 'Сентябрь','Октябрь', 'Ноябрь'];
   var monthDictionarPopup = ['Января', 'Февраля', 'Марта', 'Апреля', 'Мая', 'Июня', 'Июля','Августа', 'Сентября','Октября', 'Ноября'];
@@ -72,6 +75,7 @@ window.weekTableSwitch = (function () {
     var target = evt.target;
     if (target.classList.contains('popup-wrapper')) {
       popupModal.classList.remove('popup-wrapper--open');
+      successBlock.style.display = 'flex';
       document.body.classList.remove('no-scroll');
       document.removeEventListener('click', closeOnOuterClick);
     }
@@ -330,6 +334,17 @@ window.weekTableSwitch = (function () {
     timeInputsList[1].setAttribute('data-date', target.dataset.date);
 
     calculateFinalOrderSum(timeInputsList[1].dataset.date, timeInputsList[0].dataset.date);
-  });  
+  });
+
+  userTypeRadios[0].addEventListener('change', function(evt) {
+    userMailInput.required = false;
+    userMailInput.style.display = 'none';    
+    document.querySelector('input[name="phone"]').style.marginRight = 0;
+  }); 
+
+  userTypeRadios[1].addEventListener('change', function(evt) {
+    document.querySelector('input[name="mail"]').style.display = 'block';
+    document.querySelector('input[name="phone"]').style.marginRight = '15px';
+  }); 
 
 })();

@@ -1,17 +1,22 @@
 'use strict';
 
 document.scrollNav = ( function() {
+	var mainHeader = document.querySelector('.page-header');
 	var headerNav = document.querySelector('.scroll-nav');
 	var scrollNavBreakpoint = headerNav.offsetHeight + headerNav.offsetTop;
+	var mainHeaderTopPadding = Number(getComputedStyle(mainHeader).paddingTop.replace(/[px]/g, ''));
+	var mainHeaderInitialPadding = getComputedStyle(mainHeader).paddingTop;
+	var initialHeaderHeight = document.querySelector('.page-header-top-wrapper').offsetHeight;
 
 
 	window.addEventListener('scroll', function() {
 		if (window.pageYOffset > scrollNavBreakpoint) {
 			headerNav.classList.add('scroll-nav--fixed');
-			document.body.style.paddingTop = scrollNavBreakpoint + 'px';
+			console.log(headerNav.offsetHeight, mainHeaderInitialPadding);
+			mainHeader.style.paddingTop = initialHeaderHeight  + mainHeaderTopPadding + 'px';			
 		} else {
 			headerNav.classList.remove('scroll-nav--fixed');
-			document.body.style.paddingTop = 0;
+			mainHeader.style.paddingTop = mainHeaderInitialPadding;
 		}
 	});
 

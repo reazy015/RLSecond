@@ -20,10 +20,10 @@ div.popup-wrapper
 
             div.input-wrapper__instruction
                 label.user-type
-                    input(type='radio', name='user-type')
+                    input(type='radio', name='user-type').user-type__radio
                     span Физ.лицо
                 label.user-type
-                    input(type='radio', name='user-type', checked)
+                    input(type='radio', name='user-type', checked).user-type__radio
                     span Юр.лицо
             div.popup-module-input-wrapper.popup-module-input-wrapper--contacts                
                 input(type='text', name='name', placeholder='Имя', required).popup-module-form__input
@@ -41,3 +41,4 @@ div.popup-wrapper
                         input(type='text', name="sum", value="", data-price="", data-readonly, required).order-price__sum
                     span.order-price__currency руб.
         span.popup-module__close
+            i.fas.fa-times

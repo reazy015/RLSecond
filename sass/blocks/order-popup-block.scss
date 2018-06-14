@@ -14,7 +14,8 @@
     z-index: 100;
   }
 }
-.popup-module {
+.popup-module,
+.popup-module-success {
   position: relative;
   top: 5%;
   bottom: 5%;
@@ -31,6 +32,15 @@
     margin-top: 25px;
     margin-bottom: 25px;
   }
+}
+.popup-module-success {
+  display: none;
+  top: 20%;
+  @include anaphora;
+  color: $table-azure;
+  font-size: 24px;
+  text-align: center;
+  animation: slideInUp .3s ease-in;
 }
 .popup-module__header {
   @include anaphora;
@@ -259,12 +269,16 @@
   position: absolute;
   width: 25px;
   height: 25px;
-  top: -45px;
-  right: 0;
-  background-image: url(../img/icons/close.png);
-  background-repeat: no-repeat;
-  background-position: center center;
+  top: -30px;
+  right: -25px;
+  font-size: 32px;
+  color: $basic-white;
   cursor: pointer;
+  transition: color .3s;
+
+  &:hover {
+    color: #00bac0;
+  }
 }
 .popup-module-form__submit {
   @include gotham-reg;
