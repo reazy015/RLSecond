@@ -1,0 +1,16 @@
+.event-reserve {
+	padding-top: 0;
+	padding-bottom: 100px;
+
+	& .schedule__header {
+		text-align: left;
+		color: $dark-blue;
+	}
+
+	& .schedule__comment {
+		max-width: 580px;
+		text-align: left;
+		line-height: 1.5;
+	}
+
+}

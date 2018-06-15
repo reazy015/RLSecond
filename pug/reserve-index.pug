@@ -1,0 +1,22 @@
+doctype html
+html
+    include templates/head
+    body.about-page
+        header.page-header
+            include templates/header-nav
+        include templates/reserve-page-switch-block
+        include templates/event-reserve-schedule        
+        include templates/contacts
+        include templates/footer-block
+        include templates/order-popup-block
+        include templates/success-block
+        script(src='js/vendor/jquery-3.2.1.min.js')
+        script(src='js/vendor/swiper/js/swiper.min.js')
+        script(src="https://api-maps.yandex.ru/2.1/?lang=ru_RU", type="text/javascript")        
+        script(src='js/sliderConfig.js')
+        script(src='js/scroll-nav.js')
+        script(src='js/adaptiveMenu.js')
+        script(src='js/yandex-map-config.js')
+        script(src='js/week-table-switch-reserve.js')
+        script(src='js/form-submit.js')
+        script(src='js/order-popup.js')
